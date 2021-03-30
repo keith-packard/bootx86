@@ -19,7 +19,7 @@ _start32:
 	fninit				# initialize x87 FPU
 #	mov $top_of_stack, %esp
 #	call main
-	mov 'X', %al
+	mov $'X', %al
 2:	
 	out %al, $0xe9
 	jmp 2b

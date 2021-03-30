@@ -17,8 +17,11 @@ boot.bin: boot
 clean:
 	rm -f boot boot.o boot.bin bios bios.o bios.bin
 
-run-qemu: bios.bin boot
-	qemu-system-i386 -machine type=pc-i440fx-3.1 -bios bios.bin -kernel boot
+#run-qemu: bios.bin boot
+#	qemu-system-i386 -machine type=pc-i440fx-3.1 -bios bios.bin -kernel boot
+
+run-qemu: boot.bin
+	qemu-system-i386 -bios boot.bin  -monitor none -serial none -debugcon stdio -nographic
 
 run-bochs: boot.bin bochsrc
 	bochs -f bochsrc

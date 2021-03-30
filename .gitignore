@@ -1,0 +1,5 @@
+bios
+boot
+*.bin
+*.map
+*.o

@@ -1,0 +1,4 @@
+megs: 1
+port_e9_hack: enabled=1
+romimage: file=boot.bin, address=0xffff0000
+vgaromimage: file=/dev/null

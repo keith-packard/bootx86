@@ -1,0 +1,6 @@
+SECTIONS {
+	.text 0x00000000: { *(.text*) }
+	.data		: { *(.data) }
+	.bss		: { *(.bss) }
+	.ljmp 0xFFFFFFF0: { BYTE(0xEA) LONG(0) }
+}
